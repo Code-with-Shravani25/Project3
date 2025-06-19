@@ -1,4 +1,4 @@
 FROM openjdk:21-jdk-slim
 WORKDIR /app
-COPY target/*.war app.war
+COPY webapp/target/*.war app.war
 ENTRYPOINT ["java", "-war", "app.war"]
