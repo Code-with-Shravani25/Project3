@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: <your-ecr-repo-url>
+        image: java-k8s-app:latest
         ports:
         - containerPort: 8080
