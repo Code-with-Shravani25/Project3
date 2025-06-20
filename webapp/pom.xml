@@ -23,18 +23,18 @@
       <executions>
         <execution>
           <id>default-jar</id>
-          <phase>package</phase>
           <goals>
             <goal>jar</goal>
           </goals>
           <configuration>
-            <classifier></classifier> <!-- ✅ This fixes the build error -->
+            <classifier></classifier> <!-- ✅ This prevents the failure for empty JAR -->
           </configuration>
         </execution>
       </executions>
     </plugin>
   </plugins>
 </build>
+
 
   <dependencies>
     <dependency>
