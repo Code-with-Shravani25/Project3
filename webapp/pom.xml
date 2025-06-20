@@ -14,26 +14,19 @@
   <artifactId>webapp</artifactId>
   <packaging>jar</packaging>
 
-  <build>
+<build>
   <plugins>
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-jar-plugin</artifactId>
       <version>3.4.1</version>
-      <executions>
-        <execution>
-          <id>default-jar</id>
-          <goals>
-            <goal>jar</goal>
-          </goals>
-          <configuration>
-            <classifier></classifier> <!-- ✅ This prevents the failure for empty JAR -->
-          </configuration>
-        </execution>
-      </executions>
+      <configuration>
+        <skipIfEmpty>true</skipIfEmpty> <!-- ✅ this is the correct fix -->
+      </configuration>
     </plugin>
   </plugins>
 </build>
+
 
 
   <dependencies>
