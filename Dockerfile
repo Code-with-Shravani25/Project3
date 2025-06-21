@@ -1,4 +1,2 @@
-FROM openjdk:21-jdk-slim
-WORKDIR /app
-COPY webapp/target/*.war app.war
-ENTRYPOINT ["java", "-jar", "app.war"]
+FROM tomcat:9.0.106-jre21
+COPY ./webapp-1.0-SNAPSHOT.war /usr/local/tomcat/webapps
